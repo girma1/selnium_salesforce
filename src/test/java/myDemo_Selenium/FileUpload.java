@@ -2,6 +2,8 @@ package myDemo_Selenium;
 
 import org.openqa.selenium.By;
 
+
+
 public class FileUpload extends BrowserUtility {
 
 	public static void main(String[] args) throws Exception {

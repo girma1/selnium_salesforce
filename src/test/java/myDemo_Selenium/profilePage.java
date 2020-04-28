@@ -14,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.openqa.selenium.By;
@@ -28,15 +29,16 @@ public class profilePage extends Interactions {
 		//BrowserUtility.Interactions();
 		
 		BrowserUtility.driver.findElement(By.xpath("//div[@id='userNavButton']")).click();
-		WebDriverWait wait1 = new WebDriverWait(BrowserUtility.driver, 30);
+		WebDriverWait wait1 = new WebDriverWait(BrowserUtility.driver, 40);
 //		
 	      
 		
 		BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'My Profile')]"));
 		wait1.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'My Profile')]"))));
 		BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'My Profile')]")).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		
+		//a[@id='moderatorMutton']
 		BrowserUtility.driver.findElement(By.xpath("//a[@id='moderatorMutton']"));
 		wait1.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//a[@id='moderatorMutton']"))));
 		BrowserUtility.driver.findElement(By.xpath("//a[@id='moderatorMutton']")).click();
@@ -45,24 +47,17 @@ public class profilePage extends Interactions {
 		BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'Edit Profile')]"));
 		wait1.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'Edit Profile')]"))));
 		BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'Edit Profile')]")).click();
+		Thread.sleep(2000);
 		
-		Thread.sleep(1000);
+		                        //====================unable to figuring out========================
+		
+		
 		BrowserUtility.driver.findElement(By.xpath("//input[@id='lastName']"));
 		wait1.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//input[@id='lastName']"))));
 		BrowserUtility.driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Kebede");
-		
-		
-		
+		Thread.sleep(5000);
 	
 	  
-//		WebDriverWait lastName = driver.findElement(By.xpath("//input[@id='lastName']"));
-//		lastName.sendKeys("Kebede");
-	
-		
-		Thread.sleep(2000);
-		BrowserUtility.driver.findElement(By.xpath("//div[2]/input[1][@id='lastName']"));
-	    wait1.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//div[2]/input[1][@id='lastName']"))));
-		BrowserUtility.driver.findElement(By.xpath("//div[2]/input[1][@id='lastName']")).sendKeys("myG");
 		
 		//post tab on the asame page to write on textArea.
 		BrowserUtility.driver.findElement(By.xpath("//a[@id='publisherAttachTextPost']"));

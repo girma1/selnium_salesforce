@@ -14,6 +14,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.server.handler.ClearElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Interactions {
@@ -35,6 +38,12 @@ public class Interactions {
 		BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'My Settings')]")).click();
 		Thread.sleep(2000);	
 		
+		BrowserUtility.driver.findElement(By.xpath("//span[@id='DisplayAndLayout_font'][contains(text(),'Personal Information')]"));
+		wait.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("///span[@id='DisplayAndLayout_font'][contains(text(),'Personal Information')]"))));
+		BrowserUtility.driver.findElement(By.xpath("//span[@id='DisplayAndLayout_font'][contains(text(),'Personal Information')]")).click();
+		
+		
+		//span[@id='DisplayAndLayout_font']
 		/*
 		 * clicked drop down  my setting profile 
 		 */
@@ -51,19 +60,19 @@ public class Interactions {
 		BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'Download login history for last six months, includ')]")).click();
 	
 	//===========================================done with this=========================================================================
+		//NOTE COPIED THIS CODE ONDESPLAYANDLAYOUT FOLDER
 		
-		
-		BrowserUtility.driver.findElement(By.id("//div[@id='DisplayAndLayout']//a[@class='header setupFolder']"));
-		wait.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.id("//div[@id='DisplayAndLayout']//a[@class='header setupFolder']"))));
-		BrowserUtility.driver.findElement(By.id("//div[@id='DisplayAndLayout']//a[@class='header setupFolder']")).click();
-		Thread.sleep(2000);
-		
-		
-		//div[@id='DisplayAndLayout']//span[contains(@class,'accordionIcon expand_icon')]
-		BrowserUtility.driver.findElement(By.xpath("//a[@id='CustomizeTabs_font']"));
-		wait.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//a[@id='CustomizeTabs_font']"))));
-		BrowserUtility.driver.findElement(By.xpath("//a[@id='CustomizeTabs_font']")).click();		
-		
+//		BrowserUtility.driver.findElement(By.id("//div[@id='DisplayAndLayout']//a[@class='header setupFolder']"));
+//		wait.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.id("//div[@id='DisplayAndLayout']//a[@class='header setupFolder']"))));
+//		BrowserUtility.driver.findElement(By.id("//div[@id='DisplayAndLayout']//a[@class='header setupFolder']")).click();
+//		Thread.sleep(2000);
+//		
+//		
+//		//div[@id='DisplayAndLayout']//span[contains(@class,'accordionIcon expand_icon')]
+//		BrowserUtility.driver.findElement(By.xpath("//a[@id='CustomizeTabs_font']"));
+//		wait.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//a[@id='CustomizeTabs_font']"))));
+//		BrowserUtility.driver.findElement(By.xpath("//a[@id='CustomizeTabs_font']")).click();		
+//		
 //		wait.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//span[contains(@class,'itemCategory')][contains(text(),'Personal Information')]"))));
 //		BrowserUtility.driver.findElement(By.xpath("//span[contains(@class,'itemCategory')][contains(text(),'Personal Information')]")).click();
 //		

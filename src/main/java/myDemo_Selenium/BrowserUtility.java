@@ -67,6 +67,10 @@ public class BrowserUtility {
 		driver.quit();
 		
 	}
+	 
+	 static void logout() {
+		 driver.quit();
+	 }
 }
 
 
