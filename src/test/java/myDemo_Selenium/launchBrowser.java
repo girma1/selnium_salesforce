@@ -31,6 +31,8 @@ public class launchBrowser {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[contains(text(),'Login')]"))));
 		driver.findElement(By.xpath("//a[contains(text(),'Login')]")).click();
 		
+		
+		
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@id='username']"))));
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("agirma@salesforce.com");
 		

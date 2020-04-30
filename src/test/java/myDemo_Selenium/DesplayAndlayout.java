@@ -17,7 +17,7 @@ public class DesplayAndlayout {
 		BrowserUtility.driver.findElement(By.xpath("//div[@id='userNavButton']")).click();
 		WebDriverWait wait = new WebDriverWait(BrowserUtility.driver, 30);
 		
-		wait.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'My Settings')]"))));
+		wait.until(ExpectedConditions.visibilityOf(BrowserUtility.driver.findElement(By.xpath("//span[@class='accordionIcon expand_icon']"))));
 		BrowserUtility.driver.findElement(By.xpath("//a[contains(text(),'My Settings')]")).click();
 		
 		//Actions actions = BrowserUtility.driver();
